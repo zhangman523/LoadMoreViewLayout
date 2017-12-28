@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <in.srain.cube.views.ptr.PtrClassicFrameLayout
+      android:id="@+id/frame_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+    <zhangman.github.loadmore.LoadMoreViewContainer
+        android:id="@+id/load_more_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+      <FrameLayout
+          android:id="@+id/frameLayout"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/colorAccent"
+          android:clickable="true"
+          android:focusable="true"
+          >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FameLayout"
+            android:textColor="@color/white"
+            />
+      </FrameLayout>
+    </zhangman.github.loadmore.LoadMoreViewContainer>
+  </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>

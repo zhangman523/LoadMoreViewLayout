@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">Library</string>
+  <string name="load_more_loading">加载更多...</string>
+  <string name="load_more_click_to_load_more">点击加载更多</string>
+  <string name="load_more_loaded_no_more">没有更多了...</string>
+  <string name="load_more_loaded_empty">数据为空</string>
+  <string name="load_more_error">加载失败,点击重试</string>
+  <string name="load_more_release_to_load">松开加载</string>
+  <string name="load_more_pull_to_load">上拉加载</string>
+  <string name="load_more_success">加载成功</string>
+</resources>
