@@ -20,7 +20,9 @@ Blog   : https://zhangman523.github.io
 ![](./gif/recycler_view.gif)
 
 - 点击加载更多
+
 ![](./gif/grid_view.gif)
 
 - 加载失败 点击重试
+
 ![](./gif/scroll_view.gif)
