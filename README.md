@@ -36,8 +36,8 @@ Maven 依赖
 ```xml
 <dependency>
   <groupId>zhangman.github.loadmore</groupId>
-  <artifactId>library</artifactId>
-  <version>1.0.0</version>
+  <artifactId>loadmore</artifactId>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
@@ -45,7 +45,7 @@ Maven 依赖
 gradle 配置
 
 ```
-compile 'zhangman.github.loadmore:library:1.0.0'
+compile 'zhangman.github.loadmore:loadmore:1.0.1'
 ```
 
 #### 配置
