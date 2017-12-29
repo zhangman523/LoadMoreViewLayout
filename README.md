@@ -10,7 +10,7 @@ Blog   : https://zhangman523.github.io
 
 这个项目是作为 [Ultra Pull To Refresh](https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh) 的`上拉加载`补充功能。
 
-[APK下载](./load_more_view.apk)
+[APK下载](https://github.com/zhangman523/LoadMoreViewLayout/raw/master/load_more_view.apk)
 
 - 支持所有的View：
 
