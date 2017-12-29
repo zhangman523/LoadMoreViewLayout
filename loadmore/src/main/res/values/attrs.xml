@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="LoadMoreViewContainer">
+    <attr format="integer" name="load_more_duration_to_close"/>
+    <attr format="float" name="load_more_resistance"/>
+    <attr format="boolean" name="load_more_auto_load_more"/>
+  </declare-styleable>
+</resources>

@@ -1,6 +1,7 @@
 package zhangman.github.loadmore;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -18,9 +19,9 @@ import android.widget.Scroller;
 
 public class LoadMoreViewContainer extends ViewGroup implements LoadMoreContainer {
   private static final String TAG = LoadMoreViewContainer.class.getSimpleName();
-  private static final int DURATION_TO_CLOSE = 300;
-
   public static boolean DEBUG = false;
+
+  private int mDurationToClose = 300;
 
   private LoadMoreUIHandler mLoadMoreUIHandler;
   private LoadMoreHandler mLoadMoreHandler;
@@ -54,6 +55,16 @@ public class LoadMoreViewContainer extends ViewGroup implements LoadMoreContaine
   public LoadMoreViewContainer(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
 
+    TypedArray array =
+        context.obtainStyledAttributes(attrs, R.styleable.LoadMoreViewContainer, 0, 0);
+    if (array != null) {
+      mDurationToClose = array.getInt(R.styleable.LoadMoreViewContainer_load_more_duration_to_close,
+          mDurationToClose);
+      mResistance =
+          array.getFloat(R.styleable.LoadMoreViewContainer_load_more_auto_load_more, mResistance);
+      mAutoLoadMore = array.getBoolean(R.styleable.LoadMoreViewContainer_load_more_auto_load_more,
+          mAutoLoadMore);
+    }
     mScrollChecker = new ScrollChecker();
     mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
   }
@@ -245,7 +256,7 @@ public class LoadMoreViewContainer extends ViewGroup implements LoadMoreContaine
     }
     if (mContent.getTop() < 0) {
       mScrollChecker.tryToScrollTo((int) mTouchY, (int) (mTouchY + Math.abs(mContent.getTop())),
-          DURATION_TO_CLOSE);
+          mDurationToClose);
     }
   }
 
@@ -270,7 +281,7 @@ public class LoadMoreViewContainer extends ViewGroup implements LoadMoreContaine
 
   private void onReachBottom() {
     mScrollChecker.tryToScrollTo((int) mTouchY,
-        (int) mTouchY + Math.abs(mContent.getTop()) - mFooterHeight, DURATION_TO_CLOSE);
+        (int) mTouchY + Math.abs(mContent.getTop()) - mFooterHeight, mDurationToClose);
     if (mAutoLoadMore) {
       tryToPerformLoadMore();
     } else {
@@ -327,6 +338,10 @@ public class LoadMoreViewContainer extends ViewGroup implements LoadMoreContaine
 
   public void setResistance(float resistance) {
     mResistance = resistance;
+  }
+
+  public void setDurationToClose(int DURATION_TO_CLOSE) {
+    this.mDurationToClose = DURATION_TO_CLOSE;
   }
 
   @Override

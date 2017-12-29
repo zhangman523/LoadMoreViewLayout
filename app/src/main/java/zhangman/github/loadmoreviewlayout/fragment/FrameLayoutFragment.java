@@ -59,6 +59,7 @@ public class FrameLayoutFragment extends Fragment {
       }
     });
     mLoadMoreViewContainer.useDefaultFooter();
+    //加载数据成功后调用
     mLoadMoreViewContainer.loadMoreFinish(false, true);
     mLoadMoreViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
       @Override
