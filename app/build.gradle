@@ -29,6 +29,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 //    implementation project(':loadmore')
-    implementation 'zhangman.github.loadmore:loadmore:1.0.1'
+    implementation 'zhangman.github.loadmore:loadmore:1.0.1.1'
     implementation 'in.srain.cube:ultra-ptr:1.0.11'
 }
