@@ -2,7 +2,7 @@
 
 GitHub : https://github.com/zhangman523
 
-Blog   : https://zhangman523.github.io
+Blog   : https://zhangman523.cn
 
 ---
 
